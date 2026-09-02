@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de moedas</title>
+    <title>Utilidade Pública</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <div id="space"></div>
+    <div class="space"></div>
     <div class="container">
         <div class="header">
-            <h1>Conversor de moedas</h1>
+            <h1>Central de Emergência</h1>
         </div>
-        <div class="converter">
-            <label for="amount">Valor:</label>
-            <input type="number" id="amount" placeholder="Digite o valor">
-        </div>
-        <div class="converter">
-            <label for="fromCurrency">De:</label>
-            <select id="fromCurrency">
-                <option value="USD">Dólar (USD)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="BRL">Real (BRL)</option>
+        <div class="content">
+            <select id="emergency-select">
+                <option value="null" selected disabled>Selecione um serviço</option>
+                <option value="bomb">Bombeiros</option>
+                <option value="pm">Polícia Militar</option>
+                <option value="samu">SAMU</option>
+                <option value="civil">Polícia Civil</option>
+                <option value="dfcivil">Defesa Civil</option>
+                <option value="prf">Polícia Rodoviária Federal</option>
+                <option value="deat">Delegacia do Turismo</option>
+                <option value="denuncia">Disque Denúncia</option>
+                <option value="mulher">Central de Atendimento a Mulher</option>
+                <option value="dh">Direitos Humanos</option>
+                <option value="procon">Procon</option>
+                <option value="hemorio">Hemorio</option>
+                <option value="detran">Detran</option>
+                <option value="ambiente">Disque Ambiente</option>
             </select>
         </div>
-        <div class="converter">
-            <label for="toCurrency">Para:</label>
-            <select id="toCurrency">
-                <option value="USD">Dólar (USD)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="BRL">Real (BRL)</option>
-            </select>
+        <div id="boton">
+            <button id="informar" onclick="informar()">Informar Número</button>
         </div>
-        <button id="convertButton" onclick="converter()">Converter</button>
-
-        <div id="result"></div>
+    </div>
 </body>
 
 </html>

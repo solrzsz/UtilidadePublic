@@ -1,35 +1,50 @@
-function converter() {
-    let moedaOrigem = document.getElementById("fromCurrency").value;
-    let moedaDestino = document.getElementById("toCurrency").value;
-    let valor = document.getElementById("amount").value;
-    switch (moedaOrigem) {
-        case "USD":
-            if (moedaDestino === "BRL") {
-                document.getElementById("result").innerHTML = "USD para BRL: " + (valor * 5.25).toFixed(2) + " BRL";
-            } else if (moedaDestino === "EUR") {
-                document.getElementById("result").innerHTML = "USD para EUR: " + (valor * 0.85).toFixed(2) + " EUR";
-            } else {
-                document.getElementById("result").innerHTML = "USD: " + valor + " USD";
-            }
+function informar(){
+    let n = document.getElementById("emergency-select").value;
+    switch(n){
+        case "null":
+            alert("Selecione uma opção válida.");
             break;
-        case "BRL":
-            if (moedaDestino === "USD") {
-                document.getElementById("result").innerHTML = "BRL para USD: " + (valor / 5.10).toFixed(2) + " USD";
-            } else if (moedaDestino === "EUR") {
-                document.getElementById("result").innerHTML = "BRL para EUR: " + (valor / 5.91).toFixed(2) + " EUR";
-            } else {
-                document.getElementById("result").innerHTML = "BRL: " + valor + " BRL";
-            }
+        case "bomb":
+            alert("Ligue para o Corpo de Bombeiros: 193");
             break;
-        case "EUR":
-            if (moedaDestino === "USD") {
-                document.getElementById("result").innerHTML = "EUR para USD: " + (valor * 1.18).toFixed(2) + " USD";
-            } else if (moedaDestino === "BRL") {
-                document.getElementById("result").innerHTML = "EUR para BRL: " + (valor * 5.91).toFixed(2) + " BRL";
-            } else {
-                document.getElementById("result").innerHTML = "EUR: " + valor + " EUR";
-            }
+        case "pm":
+            alert("Ligue para a Polícia Militar: 190");
+            break;
+        case "samu":
+            alert("Ligue para o SAMU: 192");
+            break;
+        case "civil":
+            alert("Ligue para a Polícia Civil: 197");
+            break;
+        case "dfcivil":
+            alert("Ligue para a Defesa Civil: 199");
+            break;
+        case "prf":
+            alert("Ligue para a Polícia Rodoviária Federal: 198");
+            break;
+        case "deat":
+            alert("Ligue para a Delegacia do Turismo: 196");
+            break;
+        case "denuncia":
+            alert("Ligue para o Disque Denúncia: 181");
+            break;
+        case "mulher":
+            alert("Ligue para a Central de Atendimento a Mulher: 180");
+            break;
+        case "dh":
+            alert("Ligue para os Direitos Humanos: 182");
+            break;
+        case "procon":
+            alert("Ligue para o Procon: 183");
+            break;
+        case "hemorio":
+            alert("Ligue para o Hemorio: 184");
+            break;
+        case "detran":
+            alert("Ligue para o Detran: 185");
+            break;
+        case "ambiente":
+            alert("Ligue para o Disque Ambiente: 186");
             break;
     }
-
 }
